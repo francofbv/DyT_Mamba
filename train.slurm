@@ -7,11 +7,10 @@
 #SBATCH --constraint=gpu80          # Constraint to specific GPU type
 #SBATCH --gres=gpu:8                # Request 8 GPUs
 #SBATCH --partition=highgpu         # Partition to submit to
-#SBATCH --output=vit_train_%j.out   # Output file
-#SBATCH --error=vit_train_%j.err    # Error file
+#SBATCH --output=/home/fvidal/out_files/DyT/vit_train_%j.out   # Output file
+#SBATCH --error=/home/fvidal/out_files/DyT/vit_train_%j.err    # Error file
 #SBATCH --mail-type=END             # Send email when job ends
 #SBATCH --mail-user=francobicudovidal@gmail.com # Replace with your email
-
 
 # Load necessary modules (if required)
 module load cuda/11.8  # Adjust based on your environment
