@@ -31,4 +31,5 @@ srun torchrun --nproc_per_node=8 main.py \
     --model_ema_eval true \
     --data_path /datasets/ImageNet2012nonpub/ \
     --output_dir /home/fvidal/DyT_output \
-    --dynamic_tanh true
+    --dynamic_tanh true \
+    --epochs 100
