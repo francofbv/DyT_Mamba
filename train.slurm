@@ -22,7 +22,7 @@ conda activate DyT # Use your correct environment
 
 # Run the training script
 srun torchrun --nproc_per_node=8 main.py \
-    --model vit_base_patch16_224 \
+    --model videomamba_tiny \
     --drop_path 0.1 \
     --batch_size 64 \
     --lr 4e-3 \

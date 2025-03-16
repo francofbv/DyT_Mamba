@@ -66,7 +66,8 @@ def get_args_parser():
                         help='image input size')
     parser.add_argument('--layer_scale_init_value', default=1e-6, type=float,
                         help="Layer scale initial values")
-
+    parser.add_argument('--drop', type=float, default=0.0, metavar='PCT',
+                        help='Dropout rate (default: 0.)')
     # EMA related parameters
     parser.add_argument('--model_ema', type=str2bool, default=False)
     parser.add_argument('--model_ema_decay', type=float, default=0.9999, help='')
@@ -296,6 +297,31 @@ def main(args):
             num_classes=args.nb_classes,
             global_pool='avg',
             drop_path_rate=args.drop_path,
+        )
+    elif "mamba" in args.model:
+        from VideoMamba.videomamba.image_sm.models import register_model, VisionMamba
+
+
+        @register_model
+        def videomamba_tiny(pretrained=False, **kwargs):
+            model = VisionMamba(
+                patch_size=16,
+                embed_dim=192,
+                depth=24,
+                rms_norm=True,
+                residual_in_fp32=True,
+                fused_add_norm=True,
+                **kwargs
+            )
+            return model
+        model = create_model(
+            args.model,
+            pretrained=False,
+            num_classes=args.nb_classes,
+            drop_rate=args.drop,
+            drop_path_rate=args.drop_path,
+            drop_block_rate=None,
+            img_size=args.input_size,
         )
     else:
         raise ValueError(f"Unrecognized model: {args.model}")
