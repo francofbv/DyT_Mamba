@@ -3417,3 +3417,6 @@ Epoch: [10]  [ 870/2502]  eta: 0:17:59  lr: 0.002070  min_lr: 0.002070  loss: 4.
 Epoch: [10]  [ 880/2502]  eta: 0:17:52  lr: 0.002070  min_lr: 0.002070  loss: 4.9497 (5.2013)  weight_decay: 0.0500 (0.0500)  time: 0.6547  data: 0.0003  max mem: 10056
 Epoch: [10]  [ 890/2502]  eta: 0:17:46  lr: 0.002071  min_lr: 0.002071  loss: 5.1531 (5.1978)  weight_decay: 0.0500 (0.0500)  time: 0.6745  data: 0.0025  max mem: 10056
 Epoch: [10]  [ 900/2502]  eta: 0:17:39  lr: 0.002072  min_lr: 0.002072  loss: 5.2592 (5.1989)  weight_decay: 0.0500 (0.0500)  time: 0.6562  data: 0.0043  max mem: 10056
+Epoch: [10]  [ 910/2502]  eta: 0:17:31  lr: 0.002073  min_lr: 0.002073  loss: 5.3342 (5.1997)  weight_decay: 0.0500 (0.0500)  time: 0.6240  data: 0.0020  max mem: 10056
+Epoch: [10]  [ 920/2502]  eta: 0:17:25  lr: 0.002074  min_lr: 0.002074  loss: 5.2924 (5.2004)  weight_decay: 0.0500 (0.0500)  time: 0.6435  data: 0.0004  max mem: 10056
+Epoch: [10]  [ 930/2502]  eta: 0:17:18  lr: 0.002074  min_lr: 0.002074  loss: 4.9157 (5.1961)  weight_decay: 0.0500 (0.0500)  time: 0.6509  data: 0.0013  max mem: 10056
