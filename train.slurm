@@ -12,6 +12,7 @@
 #SBATCH --mail-type=END             # Send email when job ends
 #SBATCH --mail-user=francobicudovidal@gmail.com # Replace with your email
 
+export PYTHONPATH="/lustre/fs1/home/fvidal/DyT_Mamba:$PYTHONPATH"
 
 # Load necessary modules (if required)
 module load cuda/11.8  # Adjust based on your environment
