@@ -21,7 +21,7 @@ source ~/.bashrc
 conda activate DyT # Use your correct environment
 
 # Run the training script
-srun python -m torch.distributed.launch --nproc_per_node=8 main.py \
+srun torchrun --nproc_per_node=8 main.py \
     --model vit_base_patch16_224 \
     --drop_path 0.1 \
     --batch_size 64 \
