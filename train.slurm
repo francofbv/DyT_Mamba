@@ -5,7 +5,7 @@
 #SBATCH --mem-per-cpu=10G           # Memory per CPU core
 #SBATCH --nodes=1                   # Number of nodes
 #SBATCH --constraint=gpu80          # Constraint to specific GPU type
-#SBATCH --gres=gpu:8                # Request 8 GPUs
+#SBATCH --gres=gpu:1                # Request 8 GPUs
 #SBATCH --partition=highgpu         # Partition to submit to
 #SBATCH --output=vit_train_%j.out   # Output file
 #SBATCH --error=vit_train_%j.err    # Error file
