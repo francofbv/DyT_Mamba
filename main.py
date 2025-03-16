@@ -299,7 +299,7 @@ def main(args):
             drop_path_rate=args.drop_path,
         )
     elif "mamba" in args.model:
-        from VideoMamba.videomamba.image_sm.models import register_model, VisionMamba
+        from VideoMamba.videomamba.image_sm.models.videomamba import register_model, VisionMamba
 
 
         @register_model
